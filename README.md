@@ -27,7 +27,7 @@ El sistema opera mediante los siguientes pasos secuenciales:
 4. **Verificación de Prerrequisitos:**
    - Si el estudiante confirma ("S"), el sistema recorre su historial para buscar si ya cursó *Fundamentos de Programación*.
    - Mediante una estructura condicional ('swith'), valida la situación:
-     - **Si cursó la materia:** Revisa la nota ('n1'). Si es igual o mayor a **7.0**, la matrícula es **Aprobada**. Si es menor, es rechazada por reprobar el prerrequisito.
+     - **Si cursó la materia:** Revisa la nota ('n1'). Si es igual o mayor a **7.0**, la matrícula es aprobada. Si es menor, es rechazada por reprobar el prerrequisito.
      - **Si no cursó la materia:** La matrícula es rechazada por no contar con el prerrequisito en su historia.
 5. **Salida:** Imprime en la consola el resultado final del proceso de matrícula.
 
