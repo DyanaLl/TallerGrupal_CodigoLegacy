@@ -11,7 +11,7 @@
 ### 1. ¿Qué problema resuelve esta aplicación?
 Es un módulo de validación del proceso de matrícula de la carrera de Desarrollo de Software.
 
-Su objetivo principal es determinar si un estudiante es apto o no para matricularse en la materia **Estructuras de Datos**, verificando que cumpla con los requisitos. Esto es obligatorio, ya que debe haber cursado y aprobado la materia de **Fundamentos de Programación** con una nota mínima de **7.0**.
+Su objetivo principal es determinar si un estudiante es apto o no para matricularse en la materia y pueda acceder a **Estructuras de Datos**, verificando que cumpla con los requisitos. Esto es obligatorio, ya que debe haber cursado y aprobado la materia de **Fundamentos de Programación** con una nota mínima de **7.0**.
 
 ### 2. Descripción del Flujo de Datos
 El sistema opera mediante los siguientes pasos secuenciales:
