@@ -1,32 +1,40 @@
-# PUCEFundamentos01
-## 🚀 Taller Autónomo - Operación Código Legacy
+# 🚀 Taller Autónomo - Operación Código Legacy
 
-Bienvenidos a su primer reto de mantenimiento de software. En el mundo real, rara vez crearán sistemas desde cero; la mayor parte del tiempo heredarán código escrito por otras personas, a menudo sin documentación, con nombres confusos y errores ocultos.
-
-Hoy asumen el rol de **Analistas de Desarrollo**. El departamento de TI del PUCE TEC les ha entregado el módulo beta de validación de matrículas escrito en Java 25. El programador anterior fue reasignado y dejó el trabajo a medias.
-
-El sistema compila, pero tiene fallos estructurales graves. Su objetivo es entenderlo, arreglarlo y mejorarlo.
+**Integrantes:**
+*Diana Llivipuma
+*Sumak Jami
 
 ---
 
-### Misión de la Semana (Trabajo en Grupos)
+## Fase 1: Ingeniería Inversa y Documentación
 
-### Fase 1: Ingeniería Inversa
-* **Clonen** este repositorio y creen una rama (`branch`) con el nombre de su grupo.
-* **Lean** el código línea por línea. Usen herramientas de IA si lo necesitan, pero *solo para entender*, no para reescribir.
-* **Expliquen** en el archivo `README.md` de forma clara y objetiva qué problema resuelve esta aplicación y describan el flujo de datos.
+### 1. ¿Qué problema resuelve esta aplicación?
+Es un módulo de validación del proceso de matrícula de la carrera de Desarrollo de Software.
 
-### Fase 2: Refactorización y Debugging
-* **Nombres vagos:** El código está lleno de variables como `usr`, `m1`, `n1`, `p1`. Renómbrenlas usando las buenas prácticas de la industria para que el código sea legible.
-* **El Bug Oculto:** Si ejecutan el programa y registran a un estudiante nuevo (que no es de reingreso), el sistema colapsa abruptamente al evaluar la materia destino. Encuentren la línea exacta que causa la excepción, entiendan por qué ocurre lógicamente y apliquen la solución en el código.
+Su objetivo principal es determinar si un estudiante es apto o no para matricularse en la materia **Estructuras de Datos**, verificando que cumpla con los requisitos. Esto es obligatorio, ya que debe haber cursado y aprobado la materia de **Fundamentos de Programación** con una nota mínima de **7.0**.
 
-### Fase 3: Nueva Funcionalidad (Requerimiento del Cliente)
-Dirección Académica ha solicitado un cambio urgente en la regla de negocio:
+### 2. Descripción del Flujo de Datos
+El sistema opera mediante los siguientes pasos secuenciales:
 
-> Si un estudiante aprueba el prerrequisito con una calificación perfecta de **10.0**, el sistema no solo debe aprobar la matrícula, sino imprimir el siguiente mensaje destacado: *"¡Felicidades! Ha sido seleccionado como Tutor de Programación del PUCE TEC para este semestre."*
+1. **Ingreso de Datos Iniciales:**
+   - Solicitar en nombre del estudiante ('usr')
+   - Preguntar si el estudiante es de reingreso o arrastre ('S/N')
+2. **Evaluación de Historial:**
+   - **Si el estudiante es de reingreso ("S"):** El programa registra en su historial ('h_materias') la materia *Fundamentos de Programación* y solicita la nota final obtenida ('n1'), convirtiéndora a un valor numérico ('double').
+   - **Si el estudiante es nuevo ("N"):** Se muestra un mensaje indicando que se registra como estudiante de Primer Semestre y no se asigna ninguna materia a su historial (`h_materias` permanece como `null`).
+3. **Solicitud de Materia Destino:**
+   - Muestra la materia a solicitar (*Estructuras de Datos*) y consulta si desea solicitar el cupo (`S/N`).
+4. **Verificación de Prerrequisitos:**
+   - Si el estudiante confirma ("S"), el sistema recorre su historial para buscar si ya cursó *Fundamentos de Programación*.
+   - Mediante una estructura condicional ('swith'), valida la situación:
+     - **Si cursó la materia:** Revisa la nota ('n1'). Si es igual o mayor a **7.0**, la matrícula es **Aprobada**. Si es menor, es rechazada por reprobar el prerrequisito.
+     - **Si no cursó la materia:** La matrícula es rechazada por no contar con el prerrequisito en su historia.
+5. **Salida:** Imprime en la consola el resultado final del proceso de matrícula.
 
----
 
-### Entregables Finales
-* **Pull Request:** Suban sus cambios a GitHub y abran un *Pull Request* hacia el repositorio original. Se evaluará el historial de commits para validar el trabajo en equipo.
-* **Video de Defensa Técnica (Máximo 3 minutos):** Incluyan el enlace al video en la descripción de su Pull Request. En la grabación deben demostrar la aplicación funcionando sin errores en la terminal, explicar dónde estaba el error oculto y cómo lo solucionaron, y mostrar el código refactorizado con la nueva funcionalidad implementada.
+
+
+
+
+
+ 
