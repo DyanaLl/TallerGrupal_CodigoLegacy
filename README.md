@@ -2,9 +2,9 @@
 
 **Integrantes:**
 
-*Diana Llivipuma*
+-*Diana Llivipuma*
 
-*Sumak Jami*
+-*Sumak Jami*
 
 ---
 
