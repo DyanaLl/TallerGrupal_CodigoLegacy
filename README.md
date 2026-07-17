@@ -1,8 +1,9 @@
 # 🚀 Taller Autónomo - Operación Código Legacy
 
 **Integrantes:**
-*Diana Llivipuma
-*Sumak Jami
+
+*Diana Llivipuma*
+*Sumak Jami*
 
 ---
 
