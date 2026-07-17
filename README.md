@@ -11,7 +11,7 @@
 ### 1. ¿Qué problema resuelve esta aplicación?
 Es un módulo de validación del proceso de matrícula de la carrera de Desarrollo de Software.
 
-Su objetivo principal es determinar si un estudiante es apto o no para matricularse en la materia y pueda acceder a **Estructuras de Datos**, verificando que cumpla con los requisitos. Esto es obligatorio, ya que debe haber cursado y aprobado la materia de **Fundamentos de Programación** con una nota mínima de **7.0**.
+Su objetivo principal es determinar si un estudiante es apto o no para matricularse en la materia y el estudiante pueda acceder a **Estructuras de Datos**, verificando que cumpla con los requisitos requeridos. Esto es obligatorio, ya que debe haber cursado y aprobado la materia de **Fundamentos de Programación** con una nota mínima de **7.0**.
 
 ### 2. Descripción del Flujo de Datos
 El sistema opera mediante los siguientes pasos:
@@ -20,7 +20,7 @@ El sistema opera mediante los siguientes pasos:
    - Solicitar en nombre del estudiante ('usr')
    - Preguntar si el estudiante es de reingreso o arrastre ('S/N')
 2. **Evaluación de Historial:**
-   - **Si el estudiante es de reingreso ("S"):** El programa registra en su historial ('h_materias') la materia *Fundamentos de Programación* y solicita la nota final obtenida ('n1'), convirtiéndora a un valor numérico ('double').
+   - **Si el estudiante es de reingreso ("S"):** El programa registra en su historial ('h_materias') la materia *Fundamentos de Programación* y solicita la nota final obtenida ('n1'), convirtiéndola a un valor numérico ('double').
    - **Si el estudiante es nuevo ("N"):** Se muestra un mensaje indicando que se registra como estudiante de Primer Semestre y no se asigna ninguna materia a su historial (`h_materias` permanece como `null`).
 3. **Solicitud de Materia Destino:**
    - Muestra la materia a solicitar (*Estructuras de Datos*) y consulta si desea solicitar el cupo (`S/N`).
